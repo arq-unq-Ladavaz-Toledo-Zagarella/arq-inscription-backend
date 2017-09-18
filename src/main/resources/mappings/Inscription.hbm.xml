@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+						           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field" default-cascade="save-update">
+	<class name="unq.arq.model.Inscription">
+		<id column="ID" name="id">
+			<generator class="native"/>
+		</id>
+		<one-to-one name="student" class="unq.arq.model.Student" cascade="save-update"></one-to-one>
+		<list name="subjects" lazy="false">
+			<key column="inscriptionID"/>
+			<list-index column="id"/>
+			<many-to-many class="unq.arq.model.Subject"/>
+		</list>
+	</class>
+</hibernate-mapping>

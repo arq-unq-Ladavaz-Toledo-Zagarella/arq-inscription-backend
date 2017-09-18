@@ -41,5 +41,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 		</jaxrs:features>
 	</jaxrs:server>
 
-	<bean id="inscriptionRest" class="unq.arq.rest.InscriptionRest"></bean>
+	<bean id="inscriptionRest" class="unq.arq.rest.InscriptionRest">
+		<property name="inscriptionService" ref="services.inscription"/>
+	</bean>
 </beans>

@@ -1,10 +1,16 @@
 package unq.arq.model;
 
-public class Student {
-	private String name;
+public class Student extends Entity {
 
-	public Student(String name) {
+	private static final long serialVersionUID = -1145645752787029888L;
+	private String name;
+	private int fileNumber;
+
+	public Student() {  super(); }
+	
+	public Student(String name, int fileNumber) {
 		setName(name);
+		setFileNumber(fileNumber);
 	}
 	
 	public String getName() {
@@ -12,6 +18,14 @@ public class Student {
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.name= name;
+	}
+
+	public int getFileNumber() {
+		return fileNumber;
+	}
+
+	public void setFileNumber(int fileNumber) {
+		this.fileNumber= fileNumber;
 	}
 }

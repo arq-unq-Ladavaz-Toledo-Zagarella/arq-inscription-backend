@@ -10,7 +10,7 @@ import org.junit.Test;
 import unq.arq.model.exceptions.SubjectAlreadyAddedException;
 
 public class InscriptionTest {
-	public Student student= new Student("Juan Perez");
+	public Student student= new Student("Juan Perez", 34562);
 	public Inscription inscription = new Inscription(student);
 	
 	@Before
