@@ -10,7 +10,7 @@ import org.junit.Test;
 import unq.arq.model.exceptions.SubjectAlreadyAddedException;
 
 public class InscriptionTest {
-	public Student student= new Student("Juan Perez", 34562);
+	public Student student= new Student("juan", "abc123", "Juan", "Perez", 34124670);
 	public Inscription inscription = new Inscription(student);
 	
 	@Before
@@ -20,7 +20,8 @@ public class InscriptionTest {
 	
 	@Test
 	public void testNewInscription() {
-		assertEquals("Juan Perez", inscription.getStudent().getName());
+		assertEquals("juan", inscription.getStudent().getUsername());
+		assertEquals("abc123", inscription.getStudent().getPassword());
 		assertEquals(0, inscription.getSubjects().size());
 	}
 	

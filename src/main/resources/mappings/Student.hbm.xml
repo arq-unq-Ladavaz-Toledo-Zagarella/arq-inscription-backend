@@ -6,7 +6,10 @@
 		<id column="ID" name="id">
 			<generator class="native"/>
 		</id>
+		<property name="username"></property>
+		<property name="password"></property>
 		<property name="name"></property>
-		<property name="fileNumber"></property>
+		<property name="lastName"></property>
+		<property name="dni"></property>
 	</class>
 </hibernate-mapping>

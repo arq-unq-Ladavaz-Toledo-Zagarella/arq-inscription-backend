@@ -27,6 +27,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 	<jaxrs:server id="inscription">
 		<jaxrs:serviceBeans>
 			<ref bean="inscriptionRest"/>
+			<ref bean="studentRest"/>
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json"/>
@@ -43,5 +44,8 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 
 	<bean id="inscriptionRest" class="unq.arq.rest.InscriptionRest">
 		<property name="inscriptionService" ref="services.inscription"/>
+	</bean>
+	<bean id="studentRest" class="unq.arq.rest.StudentRest">
+		<property name="studentService" ref="services.student"></property>
 	</bean>
 </beans>
