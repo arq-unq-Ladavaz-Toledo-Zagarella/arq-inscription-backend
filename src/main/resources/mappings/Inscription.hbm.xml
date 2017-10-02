@@ -6,11 +6,11 @@
 		<id column="ID" name="id">
 			<generator class="native"/>
 		</id>
-		<one-to-one name="student" class="unq.arq.model.Student" cascade="save-update"></one-to-one>
-		<list name="subjects" lazy="false">
+		<one-to-one name="student" class="unq.arq.model.Student"></one-to-one>
+		
+		<bag name="subjects" lazy="false">
 			<key column="inscriptionID"/>
-			<list-index column="id"/>
 			<many-to-many class="unq.arq.model.Subject"/>
-		</list>
+		</bag>
 	</class>
 </hibernate-mapping>

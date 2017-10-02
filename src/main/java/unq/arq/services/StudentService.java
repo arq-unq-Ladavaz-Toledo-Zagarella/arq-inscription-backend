@@ -14,6 +14,6 @@ public class StudentService extends GenericService<Student> {
 				.findFirst().orElse(null);
 		if(student == null)
 			return Response.status(Response.Status.BAD_REQUEST).build();
-		return Response.status(Response.Status.OK).build();
+		return Response.ok(student.getId()).build();
 	}
 }

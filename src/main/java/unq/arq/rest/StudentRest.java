@@ -1,7 +1,5 @@
 package unq.arq.rest;
 
-import java.util.List;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -19,11 +17,11 @@ public class StudentRest {
 
 	public StudentService getStudentService() {
 		return studentService;
-	}
+	}		
 
 	public void setStudentService(StudentService studentService) {
 		this.studentService = studentService;
-		Student student= new Student("juan", "abc123", "Juan", "Perez", 34124670);
+		Student student= new Student("usuariodeprueba", "usuariodeprueba", "Juan", "Perez", 34124670);
 		studentService.save(student);
 	}
 	

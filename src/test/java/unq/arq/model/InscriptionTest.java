@@ -11,7 +11,7 @@ import unq.arq.model.exceptions.SubjectAlreadyAddedException;
 
 public class InscriptionTest {
 	public Student student= new Student("juan", "abc123", "Juan", "Perez", 34124670);
-	public Inscription inscription = new Inscription(student);
+	public Inscription inscription = new Inscription(student, new ArrayList<Subject>());
 	
 	@Before
 	public void setUp() {
@@ -46,4 +46,3 @@ public class InscriptionTest {
 		inscription.addSubject(subject);
 	}
 }
-		

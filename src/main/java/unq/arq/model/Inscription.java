@@ -1,6 +1,5 @@
 package unq.arq.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import unq.arq.model.exceptions.SubjectAlreadyAddedException;
@@ -8,13 +7,14 @@ import unq.arq.model.exceptions.SubjectAlreadyAddedException;
 public class Inscription extends Entity {
 
 	private static final long serialVersionUID = -7120114275456480040L;
-	private Student student= null;
-	private List<Subject> subjects= new ArrayList<Subject>();
+	private Student student;
+	private List<Subject> subjects;
 	
 	public Inscription() { super(); }
 	
-	public Inscription(Student student) {
+	public Inscription(Student student, List<Subject> subjects) {
 		setStudent(student);
+		setSubjects(subjects);
 	}
 	
 	/**
@@ -49,7 +49,7 @@ public class Inscription extends Entity {
 		return subjects;
 	}
 	
-	public void setSubjects(ArrayList<Subject> subjects) {
+	public void setSubjects(List<Subject> subjects) {
 		this.subjects= subjects;
 	}
 }
