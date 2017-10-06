@@ -38,6 +38,14 @@ public class InscriptionRest {
 		return Response.ok(inscription).build();
 	}
 	
+	@GET
+    @Path("/{id}")
+    @Produces("application/json")
+	@Consumes("application/json")
+    public Inscription getInscriptions(@PathParam("id") final Integer inscriptionId) {
+		return getInscriptionService().findBy(inscriptionId);
+    }
+	
 	public InscriptionService getInscriptionService() {
 		return inscriptionService;
 	}
